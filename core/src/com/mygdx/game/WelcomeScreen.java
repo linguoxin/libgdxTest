@@ -26,15 +26,19 @@ public class WelcomeScreen extends ScreenAdapter {
             @Override
             public void run() {
                 Assets.animatedImage.remove();
-                for(int i=0;i<15;i++){
-                    Assets.textureFlipRegions[i].flip(true,false);
+                for (int i = 0; i < 15; i++) {
+                    Assets.textureFlipRegions[i].flip(true, false);
                 }
                 Assets.longTextImage.remove();
                 for (int i = 0; i < 5; i++) {
                     Assets.textImage[i].remove();
                 }
-               Assets.welcomeStage.addActor(Assets.animatedFlipImage);
-                Assets.initPipi();
+                Assets.welcomeStage.addActor(Assets.animatedFlipImage);
+                AnimationResource animationResource = new AnimationResource("res/pipi.atlas"
+                        , 25, 0.15f, true);
+                AnimatedImage animatedImage = animationResource.createAnimatedImage();
+                animatedImage.setPosition(50, 50);
+                Assets.welcomeStage.addActor(animatedImage);
             }
         }, 6);
     }
