@@ -1,0 +1,19 @@
+
+big.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+badlogic
+  rotate: false
+  xy: 1, 186
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+dady
+  rotate: false
+  xy: 1, 1
+  size: 198, 183
+  orig: 198, 183
+  offset: 0, 0
+  index: -1

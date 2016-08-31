@@ -3,37 +3,44 @@ text.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+long_text
+  rotate: false
+  xy: 1, 146
+  size: 658, 31
+  orig: 658, 31
+  offset: 0, 0
+  index: -1
 yan
   rotate: false
-  xy: 1, 100
+  xy: 1, 1
   size: 112, 143
   orig: 112, 143
   offset: 0, 0
   index: -1
 de
   rotate: false
-  xy: 115, 107
+  xy: 115, 8
   size: 106, 136
   orig: 106, 136
   offset: 0, 0
   index: -1
 miao
   rotate: false
-  xy: 223, 114
+  xy: 223, 15
   size: 107, 129
   orig: 107, 129
   offset: 0, 0
   index: -1
 se
   rotate: false
-  xy: 332, 122
+  xy: 332, 23
   size: 108, 121
   orig: 108, 121
   offset: 0, 0
   index: -1
 qi
   rotate: false
-  xy: 332, 1
+  xy: 442, 25
   size: 107, 119
   orig: 107, 119
   offset: 0, 0
