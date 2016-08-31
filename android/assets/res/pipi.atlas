@@ -1,0 +1,173 @@
+
+pipi.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+0000 (1)
+  rotate: false
+  xy: 1, 761
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (10)
+  rotate: false
+  xy: 1, 609
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (11)
+  rotate: false
+  xy: 209, 761
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (12)
+  rotate: false
+  xy: 1, 457
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (13)
+  rotate: false
+  xy: 209, 609
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (14)
+  rotate: false
+  xy: 417, 761
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (15)
+  rotate: false
+  xy: 1, 305
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (16)
+  rotate: false
+  xy: 209, 457
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (17)
+  rotate: false
+  xy: 417, 609
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (18)
+  rotate: false
+  xy: 625, 761
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (19)
+  rotate: false
+  xy: 1, 153
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (2)
+  rotate: false
+  xy: 209, 305
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (20)
+  rotate: false
+  xy: 417, 457
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (21)
+  rotate: false
+  xy: 625, 609
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (22)
+  rotate: false
+  xy: 1, 1
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (23)
+  rotate: false
+  xy: 209, 153
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (24)
+  rotate: false
+  xy: 417, 305
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (3)
+  rotate: false
+  xy: 625, 457
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (4)
+  rotate: false
+  xy: 209, 1
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (5)
+  rotate: false
+  xy: 417, 153
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (6)
+  rotate: false
+  xy: 625, 305
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (7)
+  rotate: false
+  xy: 417, 1
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (8)
+  rotate: false
+  xy: 625, 153
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
+0000 (9)
+  rotate: false
+  xy: 625, 1
+  size: 206, 150
+  orig: 206, 150
+  offset: 0, 0
+  index: -1
