@@ -7,10 +7,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Event;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.DelayAction;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScalingViewport;
@@ -39,19 +46,33 @@ public class Assets {
     public static TextureRegion[] textureNoSpeakRegions;
     public static TextureRegion[] textureFlipNoSpeakRegions;
     public static TextureRegion longTextRegion;
+    public static Image canvasImage;
     public static Image longTextImage;
     public static Image topFlowerImage;
     public static Image bottomFlowerImage;
+    public static TextureRegion canvasRegion;
     public static TextureRegion topFlowerRegion;
     public static TextureRegion bottomFlowerRegion;
-
+    public static TextureRegion closeNormalRegion;
+    public static TextureRegion closeDownRegion;
+    public static TextureRegionDrawable closeNormalRegionDrawable;
+    public static TextureRegionDrawable closeDownRegionDrawable;
+    public static Button closeButton;
     public static Music welcomeMusic;
+    public static Music pipiMusic;
+
     public static Stage welcomeStage;
     public static Image[] textImage;
     public static Image backgroundImage;
     public static AnimatedImage animatedImage;
     public static AnimatedImage animatedFlipImage;
+    public static AnimatedImage animatedFlipNoSpeakImage;
+    public static AnimatedImage pipiNoSpeakAnimatedImage;
+
     public static AnimatedImage pipiAnimatedImage;
+    public static Image redImage;
+    public static Image yellowImage;
+    public static Image blueImage;
 
     public static Texture loadTexture(String file) {
         return new Texture(Gdx.files.internal(file));
@@ -89,9 +110,28 @@ public class Assets {
             angleFlipAnimation = new Animation(0.15f, textureFlipRegions);
             animatedFlipImage = new AnimatedImage(angleFlipAnimation);
             animatedFlipImage.setPosition(960, 250);
+            angleFlipNoSpeakAnimation = new Animation(0.15f, textureFlipNoSpeakRegions);
+            animatedFlipNoSpeakImage = new AnimatedImage(angleFlipNoSpeakAnimation);
+            animatedFlipNoSpeakImage.setPosition(960, 250);
 
         }
         textAtlas = new TextureAtlas(Gdx.files.internal("res/text.atlas"));
+        closeNormalRegion = textAtlas.findRegion("close_normal");
+        closeDownRegion = textAtlas.findRegion("close_down");
+        closeNormalRegionDrawable = new TextureRegionDrawable(closeNormalRegion);
+        closeDownRegionDrawable = new TextureRegionDrawable(closeDownRegion);
+        closeButton = new Button(closeNormalRegionDrawable, closeDownRegionDrawable);
+        closeButton.setPosition(1200, 710);
+        closeButton.addListener(new ClickListener() {
+                                    @Override
+                                    public void clicked(InputEvent event, float x, float y) {
+                                        Gdx.app.exit();
+                                        super.clicked(event, x, y);
+                                    }
+                                }
+        );
+        welcomeStage.addActor(closeButton);
+
         longTextRegion = textAtlas.findRegion("long_text");
         longTextImage = new Image(longTextRegion);
         longTextImage.setPosition(400, 530);
@@ -100,14 +140,16 @@ public class Assets {
         topFlowerRegion = textAtlas.findRegion("top_flower");
         topFlowerImage = new Image(topFlowerRegion);
         topFlowerImage.setPosition(-30, 580);
-        topFlowerImage.addAction(Actions.sequence(Actions.alpha(0), Actions.delay(5f), Actions.fadeIn(0.1f)));
+        topFlowerImage.addAction(Actions.sequence(Actions.alpha(0), Actions.delay(5.5f), Actions.fadeIn(0.1f)));
         welcomeStage.addActor(topFlowerImage);
         bottomFlowerRegion = textAtlas.findRegion("bottom_flower");
         bottomFlowerImage = new Image(bottomFlowerRegion);
         bottomFlowerImage.setPosition(-30, 0);
-        bottomFlowerImage.addAction(Actions.sequence(Actions.alpha(0), Actions.delay(5f), Actions.fadeIn(0.1f)));
+        bottomFlowerImage.addAction(Actions.sequence(Actions.alpha(0), Actions.delay(5.5f), Actions.fadeIn(0.1f)));
         welcomeStage.addActor(bottomFlowerImage);
-
+        canvasRegion = textAtlas.findRegion("canvas");
+        canvasImage = new Image(canvasRegion);
+        canvasImage.setPosition(300, 160);
         String[] str = {"qi", "miao", "de", "yan", "se"};
         int[] heights = {650, 700, 750, 740, 730};
         if (textAtlas != null) {
@@ -124,8 +166,8 @@ public class Assets {
         }
         welcomeMusic = Gdx.audio.newMusic(Gdx.files.internal("res/welcome.mp3"));
         welcomeMusic.play();
+        Gdx.input.setInputProcessor(welcomeStage);
     }
-
     public static void initPipi() {
         pipiAtlas = new TextureAtlas(Gdx.files.internal("res/pipi.atlas"));
         if (pipiAtlas != null) {

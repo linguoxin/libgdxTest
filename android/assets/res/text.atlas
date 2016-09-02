@@ -5,57 +5,120 @@ filter: Nearest,Nearest
 repeat: none
 bottom_flower
   rotate: false
-  xy: 1, 632
+  xy: 1, 850
   size: 819, 173
   orig: 819, 173
   offset: 0, 0
   index: -1
 top_flower
   rotate: false
-  xy: 1, 172
+  xy: 1, 390
   size: 472, 458
   orig: 472, 458
   offset: 0, 0
   index: -1
+canvas
+  rotate: false
+  xy: 475, 443
+  size: 391, 405
+  orig: 391, 405
+  offset: 0, 0
+  index: -1
 long_text
   rotate: false
-  xy: 1, 139
+  xy: 1, 357
   size: 658, 31
   orig: 658, 31
   offset: 0, 0
   index: -1
+blue
+  rotate: false
+  xy: 822, 850
+  size: 146, 173
+  orig: 146, 173
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 1, 179
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+red_big
+  rotate: false
+  xy: 1, 1
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+yellow
+  rotate: false
+  xy: 152, 179
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+yellow_big
+  rotate: false
+  xy: 152, 1
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+blue_big
+  rotate: false
+  xy: 303, 182
+  size: 146, 173
+  orig: 146, 173
+  offset: 0, 0
+  index: -1
 yan
   rotate: false
-  xy: 822, 662
+  xy: 303, 37
   size: 112, 143
   orig: 112, 143
   offset: 0, 0
   index: -1
 de
   rotate: false
-  xy: 1, 1
+  xy: 451, 219
   size: 106, 136
   orig: 106, 136
   offset: 0, 0
   index: -1
 miao
   rotate: false
-  xy: 475, 501
+  xy: 868, 719
   size: 107, 129
   orig: 107, 129
   offset: 0, 0
   index: -1
 se
   rotate: false
-  xy: 109, 16
+  xy: 868, 596
   size: 108, 121
   orig: 108, 121
   offset: 0, 0
   index: -1
 qi
   rotate: false
-  xy: 475, 380
+  xy: 868, 475
   size: 107, 119
   orig: 107, 119
+  offset: 0, 0
+  index: -1
+close_down
+  rotate: false
+  xy: 559, 275
+  size: 78, 80
+  orig: 78, 80
+  offset: 0, 0
+  index: -1
+close_normal
+  rotate: false
+  xy: 559, 193
+  size: 78, 80
+  orig: 78, 80
   offset: 0, 0
   index: -1

@@ -48,5 +48,10 @@ public class AnimationResource {
             return animatedImage;
         return null;
     }
+    public AnimatedImage newAnimatedImage(){
+        Animation animation = new Animation(frameDuration, textureRegions);
+        AnimatedImage animatedImage=new AnimatedImage(animation,isLoop);
+        return animatedImage;
+    }
 }
 

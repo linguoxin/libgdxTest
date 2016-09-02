@@ -1,0 +1,54 @@
+
+bee.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+00000
+  rotate: false
+  xy: 1, 145
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00006
+  rotate: false
+  xy: 1, 145
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00001
+  rotate: false
+  xy: 1, 73
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00002
+  rotate: false
+  xy: 71, 145
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00003
+  rotate: false
+  xy: 1, 1
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00004
+  rotate: false
+  xy: 71, 73
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+00005
+  rotate: false
+  xy: 141, 145
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
