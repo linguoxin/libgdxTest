@@ -5,120 +5,153 @@ filter: Nearest,Nearest
 repeat: none
 bottom_flower
   rotate: false
-  xy: 1, 850
+  xy: 1, 849
   size: 819, 173
   orig: 819, 173
   offset: 0, 0
   index: -1
 top_flower
   rotate: false
-  xy: 1, 390
+  xy: 1, 389
   size: 472, 458
   orig: 472, 458
   offset: 0, 0
   index: -1
 canvas
   rotate: false
-  xy: 475, 443
+  xy: 475, 442
   size: 391, 405
   orig: 391, 405
   offset: 0, 0
   index: -1
-long_text
+btn_sanjian_normal
   rotate: false
-  xy: 1, 357
-  size: 658, 31
-  orig: 658, 31
+  xy: 1, 196
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+btn_sanjian_select
+  rotate: false
+  xy: 1, 3
+  size: 530, 191
+  orig: 530, 191
   offset: 0, 0
   index: -1
 blue
   rotate: false
-  xy: 822, 850
+  xy: 822, 849
   size: 146, 173
   orig: 146, 173
   offset: 0, 0
   index: -1
 red
   rotate: false
-  xy: 1, 179
+  xy: 868, 671
   size: 149, 176
   orig: 149, 176
   offset: 0, 0
   index: -1
 red_big
   rotate: false
-  xy: 1, 1
+  xy: 868, 493
   size: 149, 176
   orig: 149, 176
   offset: 0, 0
   index: -1
 yellow
   rotate: false
-  xy: 152, 179
+  xy: 533, 264
   size: 149, 176
   orig: 149, 176
   offset: 0, 0
   index: -1
 yellow_big
   rotate: false
-  xy: 152, 1
+  xy: 533, 86
   size: 149, 176
   orig: 149, 176
   offset: 0, 0
   index: -1
 blue_big
   rotate: false
-  xy: 303, 182
+  xy: 684, 267
   size: 146, 173
   orig: 146, 173
   offset: 0, 0
   index: -1
 yan
   rotate: false
-  xy: 303, 37
+  xy: 684, 122
   size: 112, 143
   orig: 112, 143
   offset: 0, 0
   index: -1
 de
   rotate: false
-  xy: 451, 219
+  xy: 832, 304
   size: 106, 136
   orig: 106, 136
   offset: 0, 0
   index: -1
 miao
   rotate: false
-  xy: 868, 719
+  xy: 798, 136
   size: 107, 129
   orig: 107, 129
   offset: 0, 0
   index: -1
-se
-  rotate: false
-  xy: 868, 596
-  size: 108, 121
-  orig: 108, 121
-  offset: 0, 0
-  index: -1
-qi
-  rotate: false
-  xy: 868, 475
-  size: 107, 119
-  orig: 107, 119
-  offset: 0, 0
-  index: -1
 close_down
   rotate: false
-  xy: 559, 275
+  xy: 533, 4
   size: 78, 80
   orig: 78, 80
   offset: 0, 0
   index: -1
 close_normal
   rotate: false
-  xy: 559, 193
+  xy: 613, 4
   size: 78, 80
   orig: 78, 80
+  offset: 0, 0
+  index: -1
+qi
+  rotate: false
+  xy: 693, 1
+  size: 107, 119
+  orig: 107, 119
+  offset: 0, 0
+  index: -1
+se
+  rotate: false
+  xy: 802, 13
+  size: 108, 121
+  orig: 108, 121
+  offset: 0, 0
+  index: -1
+
+text2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+btn_sanyuan_normal
+  rotate: false
+  xy: 1, 227
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+btn_sanyuan_select
+  rotate: false
+  xy: 1, 34
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+long_text
+  rotate: false
+  xy: 1, 1
+  size: 658, 31
+  orig: 658, 31
   offset: 0, 0
   index: -1

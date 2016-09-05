@@ -30,14 +30,14 @@ public class WonderfulColor extends Game {
     public void switchScreen(Stage currentStage, final Game game, final Screen newScreen){
         currentStage.getRoot().getColor().a = 1;
         SequenceAction sequenceAction = new SequenceAction();
-        sequenceAction.addAction(Actions.fadeOut(0.5f));
+        sequenceAction.addAction(Actions.fadeOut(0.2f));
         sequenceAction.addAction(Actions.run(new Runnable() {
             @Override
             public void run() {
                 game.setScreen(newScreen);
             }
         }));
-        sequenceAction.addAction(Actions.delay(0.5f));
+        sequenceAction.addAction(Actions.delay(0.2f));
         sequenceAction.addAction(Actions.fadeIn(0f));
 
         currentStage.getRoot().addAction(sequenceAction);
