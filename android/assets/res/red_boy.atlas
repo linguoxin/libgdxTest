@@ -1,0 +1,108 @@
+
+red_boy.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+00000
+  rotate: false
+  xy: 1, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00001
+  rotate: false
+  xy: 1, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00002
+  rotate: false
+  xy: 1, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00003
+  rotate: false
+  xy: 243, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00004
+  rotate: false
+  xy: 243, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00005
+  rotate: false
+  xy: 485, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00006
+  rotate: false
+  xy: 485, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00007
+  rotate: false
+  xy: 727, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00008
+  rotate: false
+  xy: 727, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+
+red_boy2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+00009
+  rotate: false
+  xy: 1, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00010
+  rotate: false
+  xy: 1, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00011
+  rotate: false
+  xy: 243, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00012
+  rotate: false
+  xy: 243, 1
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1
+00013
+  rotate: false
+  xy: 485, 386
+  size: 240, 383
+  orig: 240, 383
+  offset: 0, 0
+  index: -1

@@ -41,4 +41,11 @@ public class Animation {
         }
         return keyFrames[frameNumber];
     }
+
+    public TextureRegion getIndexFrame(int index) {
+        if (index > -1 && index < keyFrames.length) {
+            return keyFrames[index];
+        }
+        return null;
+    }
 }
