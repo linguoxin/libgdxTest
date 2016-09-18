@@ -3,95 +3,130 @@ text.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+bottom_flower
+  rotate: false
+  xy: 1, 849
+  size: 819, 173
+  orig: 819, 173
+  offset: 0, 0
+  index: -1
+blackCircle
+  rotate: false
+  xy: 822, 854
+  size: 168, 168
+  orig: 168, 168
+  offset: 0, 0
+  index: -1
+move_orange
+  rotate: false
+  xy: 822, 661
+  size: 164, 191
+  orig: 164, 191
+  offset: 0, 0
+  index: -1
+long_text
+  rotate: false
+  xy: 1, 816
+  size: 658, 31
+  orig: 658, 31
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 661, 671
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
 second_background
   rotate: false
-  xy: 1, 550
+  xy: 1, 343
   size: 628, 471
   orig: 628, 471
   offset: 0, 0
   index: -1
 canvas
   rotate: false
-  xy: 631, 616
+  xy: 631, 254
   size: 391, 405
   orig: 391, 405
   offset: 0, 0
   index: -1
-move_orange
+move_black
   rotate: false
-  xy: 631, 423
-  size: 164, 191
-  orig: 164, 191
-  offset: 0, 0
-  index: -1
-move_purple
-  rotate: false
-  xy: 797, 422
-  size: 148, 192
-  orig: 148, 192
-  offset: 0, 0
-  index: -1
-top_flower
-  rotate: false
-  xy: 1, 90
-  size: 472, 458
-  orig: 472, 458
-  offset: 0, 0
-  index: -1
-red
-  rotate: false
-  xy: 475, 372
-  size: 149, 176
-  orig: 149, 176
-  offset: 0, 0
-  index: -1
-red_big
-  rotate: false
-  xy: 626, 245
-  size: 149, 176
-  orig: 149, 176
-  offset: 0, 0
-  index: -1
-yellow
-  rotate: false
-  xy: 475, 194
-  size: 149, 176
-  orig: 149, 176
-  offset: 0, 0
-  index: -1
-btn_sanjian_normal
-  rotate: false
-  xy: 475, 1
-  size: 530, 191
-  orig: 530, 191
-  offset: 0, 0
-  index: -1
-yellow_big
-  rotate: false
-  xy: 777, 244
-  size: 149, 176
-  orig: 149, 176
+  xy: 1, 44
+  size: 259, 208
+  orig: 259, 208
   offset: 0, 0
   index: -1
 star
   rotate: false
-  xy: 928, 340
+  xy: 1, 261
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 close_down
   rotate: false
-  xy: 928, 258
+  xy: 83, 261
   size: 78, 80
   orig: 78, 80
   offset: 0, 0
   index: -1
 close_normal
   rotate: false
-  xy: 1, 8
+  xy: 163, 261
   size: 78, 80
   orig: 78, 80
+  offset: 0, 0
+  index: -1
+cloud1
+  rotate: false
+  xy: 262, 215
+  size: 348, 126
+  orig: 348, 126
+  offset: 0, 0
+  index: -1
+move_green
+  rotate: false
+  xy: 262, 21
+  size: 148, 192
+  orig: 148, 192
+  offset: 0, 0
+  index: -1
+move_purple
+  rotate: false
+  xy: 412, 21
+  size: 148, 192
+  orig: 148, 192
+  offset: 0, 0
+  index: -1
+cloud2
+  rotate: false
+  xy: 612, 132
+  size: 382, 120
+  orig: 382, 120
+  offset: 0, 0
+  index: -1
+miao
+  rotate: false
+  xy: 562, 1
+  size: 107, 129
+  orig: 107, 129
+  offset: 0, 0
+  index: -1
+se
+  rotate: false
+  xy: 671, 9
+  size: 108, 121
+  orig: 108, 121
+  offset: 0, 0
+  index: -1
+qi
+  rotate: false
+  xy: 781, 11
+  size: 107, 119
+  orig: 107, 119
   offset: 0, 0
   index: -1
 
@@ -99,122 +134,141 @@ text2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-bottom_flower
+cloud3
   rotate: false
-  xy: 1, 788
-  size: 819, 173
-  orig: 819, 173
-  offset: 0, 0
-  index: -1
-btn_sanjian_select
-  rotate: false
-  xy: 1, 595
-  size: 530, 191
-  orig: 530, 191
-  offset: 0, 0
-  index: -1
-btn_sanyuan_normal
-  rotate: false
-  xy: 1, 402
-  size: 530, 191
-  orig: 530, 191
-  offset: 0, 0
-  index: -1
-btn_sanyuan_select
-  rotate: false
-  xy: 1, 209
-  size: 530, 191
-  orig: 530, 191
-  offset: 0, 0
-  index: -1
-long_text
-  rotate: false
-  xy: 1, 176
-  size: 658, 31
-  orig: 658, 31
+  xy: 1, 867
+  size: 531, 149
+  orig: 531, 149
   offset: 0, 0
   index: -1
 blueCircle
   rotate: false
-  xy: 822, 801
+  xy: 534, 856
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+top_flower
+  rotate: false
+  xy: 1, 407
+  size: 472, 458
+  orig: 472, 458
+  offset: 0, 0
+  index: -1
+btn_sanjian_normal
+  rotate: false
+  xy: 1, 214
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+btn_sanjian_select
+  rotate: false
+  xy: 475, 663
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+greenCircle
+  rotate: false
+  xy: 696, 856
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 orangeCircle
   rotate: false
-  xy: 533, 626
+  xy: 858, 856
   size: 160, 160
   orig: 160, 160
+  offset: 0, 0
+  index: -1
+btn_sanyuan_normal
+  rotate: false
+  xy: 475, 470
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+btn_sanyuan_select
+  rotate: false
+  xy: 1, 21
+  size: 530, 191
+  orig: 530, 191
+  offset: 0, 0
+  index: -1
+red_big
+  rotate: false
+  xy: 533, 292
+  size: 149, 176
+  orig: 149, 176
   offset: 0, 0
   index: -1
 purpleCircle
   rotate: false
-  xy: 1, 14
+  xy: 684, 308
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
+yellow
+  rotate: false
+  xy: 684, 130
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+yellow_big
+  rotate: false
+  xy: 533, 114
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
 redCircle
   rotate: false
-  xy: 533, 464
+  xy: 835, 146
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 yellowCircle
   rotate: false
-  xy: 163, 14
+  xy: 846, 308
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
+yan
+  rotate: false
+  xy: 835, 1
+  size: 112, 143
+  orig: 112, 143
+  offset: 0, 0
+  index: -1
+
+text3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
 blue
   rotate: false
-  xy: 533, 289
+  xy: 1, 1
   size: 146, 173
   orig: 146, 173
   offset: 0, 0
   index: -1
 blue_big
   rotate: false
-  xy: 325, 1
+  xy: 149, 1
   size: 146, 173
   orig: 146, 173
   offset: 0, 0
   index: -1
-yan
-  rotate: false
-  xy: 695, 643
-  size: 112, 143
-  orig: 112, 143
-  offset: 0, 0
-  index: -1
 de
   rotate: false
-  xy: 473, 38
+  xy: 297, 38
   size: 106, 136
   orig: 106, 136
-  offset: 0, 0
-  index: -1
-miao
-  rotate: false
-  xy: 695, 512
-  size: 107, 129
-  orig: 107, 129
-  offset: 0, 0
-  index: -1
-se
-  rotate: false
-  xy: 581, 53
-  size: 108, 121
-  orig: 108, 121
-  offset: 0, 0
-  index: -1
-qi
-  rotate: false
-  xy: 695, 391
-  size: 107, 119
-  orig: 107, 119
   offset: 0, 0
   index: -1

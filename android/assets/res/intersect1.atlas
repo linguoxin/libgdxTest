@@ -1,0 +1,19 @@
+
+intersect1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+00000
+  rotate: false
+  xy: 1, 1
+  size: 242, 214
+  orig: 242, 214
+  offset: 0, 0
+  index: -1
+00001
+  rotate: false
+  xy: 245, 1
+  size: 242, 214
+  orig: 242, 214
+  offset: 0, 0
+  index: -1

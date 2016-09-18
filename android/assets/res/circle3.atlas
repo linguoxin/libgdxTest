@@ -1,0 +1,19 @@
+
+circle3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+00000
+  rotate: false
+  xy: 1, 1
+  size: 259, 208
+  orig: 259, 208
+  offset: 0, 0
+  index: -1
+00001
+  rotate: false
+  xy: 262, 1
+  size: 259, 208
+  orig: 259, 208
+  offset: 0, 0
+  index: -1
