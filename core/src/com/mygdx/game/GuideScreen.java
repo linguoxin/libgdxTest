@@ -28,6 +28,9 @@ import java.util.Random;
  */
 public class GuideScreen extends ScreenAdapter {
     Image orangeImage;
+    Image greenImage;
+    Image blackImage;
+    Image moveBlackImage;
     Image redImage;
     Image yellowImage;
     Image blueImage;
@@ -37,9 +40,11 @@ public class GuideScreen extends ScreenAdapter {
     Music angleSpeak03;
     private Button btnSanjianse;
     private Button btnRGB;
+    ;
     private Image imgRGB;
     private SpriteBatch mSpriteBatch;
     AnimatedImage fingerAnimatedImage;
+    AnimatedImage circle3;
     boolean isDrawStar;
     Music fingerMusic;
     private OrthographicCamera mCamera;
@@ -361,7 +366,7 @@ public class GuideScreen extends ScreenAdapter {
                         answer_right1.setOnCompletionListener(new Music.OnCompletionListener() {
                             @Override
                             public void onCompletion(Music music) {
-                            //    showSecondScene();
+                                showThirdScene();
                             }
                         });
                         moveColor2();
@@ -377,7 +382,7 @@ public class GuideScreen extends ScreenAdapter {
                         not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
                             @Override
                             public void onCompletion(Music music) {
-                             //   showSecondScene();
+                                showThirdScene();
 
                             }
                         });
@@ -394,8 +399,7 @@ public class GuideScreen extends ScreenAdapter {
                         not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
                             @Override
                             public void onCompletion(Music music) {
-                            //    showSecondScene();
-
+                                showThirdScene();
                             }
                         });
                     }
@@ -450,6 +454,125 @@ public class GuideScreen extends ScreenAdapter {
         }, 2f);
     }
 
+    private void showThirdScene() {
+        Music angle06 = Gdx.audio.newMusic(Gdx.files.internal("res/angle07.mp3"));
+        angle06.play();
+        Pixmap pixmap = new Pixmap(1280, 800, Pixmap.Format.RGBA8888);
+        pixmap.setColor(0xa5e9ffff);
+        pixmap.fillRectangle(0, 0, 1280, 800);
+        starBackground = new Texture(1280, 800, Pixmap.Format.RGBA8888);
+        starBackground.draw(pixmap, 0, 0);
+        Image starBackgroundImage = new Image(starBackground);
+        Assets.welcomeStage.addActor(starBackgroundImage);
+        Assets.welcomeStage.addActor(Assets.closeButton);
+        ImageResource cloud1 = new ImageResource(Assets.textAtlas, "cloud1", 200, 500);
+        ImageResource cloud2 = new ImageResource(Assets.textAtlas, "cloud2", 500, 400);
+        ImageResource cloud3 = new ImageResource(Assets.textAtlas, "cloud3", 800, 300);
+        Assets.welcomeStage.addActor(cloud1.createImage());
+        Assets.welcomeStage.addActor(cloud2.createImage());
+        Assets.welcomeStage.addActor(cloud3.createImage());
+        Assets.welcomeStage.addActor(Assets.animatedFlipImage);
+
+        angle06.setOnCompletionListener(new Music.OnCompletionListener() {
+            @Override
+            public void onCompletion(Music music) {
+                greenImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music answer_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/answer_right3.mp3"));
+                        answer_right1.play();
+                        answer_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFourScene();
+                            }
+                        });
+                        moveColor3();
+                    }
+                });
+                blueImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music not_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/not_right3.mp3"));
+                        not_right1.play();
+                        moveColor3();
+                        not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFourScene();
+
+                            }
+                        });
+
+                    }
+                });
+                yellowImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music not_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/not_right3.mp3"));
+                        not_right1.play();
+                        moveColor3();
+                        not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFourScene();
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        AnimationResource yellowBoyResource = new AnimationResource("res/yellow_boy.atlas", 14, 0.15f, true);
+        final AnimatedImage yellowBoyAnimatedImage = yellowBoyResource.createFilpAnimatedImage();
+        yellowBoyAnimatedImage.setPosition(50, 250);
+        yellowBoyAnimatedImage.addAction(Actions.moveTo(450, 250, 4f));
+        Assets.welcomeStage.addActor(yellowBoyAnimatedImage);
+        AnimationResource blueBoyResource = new AnimationResource("res/blue_boy.atlas", 14, 0.15f, true);
+
+        final AnimatedImage blueBoyAnimatedImage = blueBoyResource.createAnimatedImage();
+
+        blueBoyAnimatedImage.setPosition(1200, 250);
+        blueBoyAnimatedImage.addAction(Actions.moveTo(550, 250, 4f));
+        Assets.welcomeStage.addActor(blueBoyAnimatedImage);
+
+
+        Timer timer = new Timer();
+        timer.scheduleTask(new Timer.Task() {
+            @Override
+            public void run() {
+                yellowBoyAnimatedImage.setStop(true);
+                blueBoyAnimatedImage.setStop(true);
+                AnimationResource animationResource = new AnimationResource("res/circle2.atlas", 2,
+                        0.5f, true);
+                final AnimatedImage animatedImage = animationResource.createAnimatedImage();
+                animatedImage.setPosition(530, 360);
+                Assets.welcomeStage.addActor(animatedImage);
+                Timer timer1 = new Timer();
+                timer1.scheduleTask(new Timer.Task() {
+                    @Override
+                    public void run() {
+                        animatedImage.setStop(true);
+
+                    }
+                }, 5f);
+                ImageResource greenCircle = new ImageResource(Assets.textAtlas, "greenCircle", 50, 500);
+                greenImage = greenCircle.createImage();
+                ImageResource yellowCircle = new ImageResource(Assets.textAtlas, "yellowCircle", 50, 300);
+                yellowImage = yellowCircle.createImage();
+                ImageResource blueCircle = new ImageResource(Assets.textAtlas, "blueCircle", 50, 100);
+                blueImage = blueCircle.createImage();
+                Assets.welcomeStage.addActor(greenImage);
+                Assets.welcomeStage.addActor(yellowImage);
+                Assets.welcomeStage.addActor(blueImage);
+
+            }
+        }, 2f);
+    }
+
     private void moveColor2() {
         purpleImage.remove();
         blueImage.remove();
@@ -458,5 +581,199 @@ public class GuideScreen extends ScreenAdapter {
         Image image = imageResource.createImage();
         image.addAction(Actions.moveTo(530, 360, 2.5f));
         Assets.welcomeStage.addActor(image);
+    }
+
+    private void moveColor3() {
+        greenImage.remove();
+        blueImage.remove();
+        yellowImage.remove();
+        ImageResource imageResource = new ImageResource(Assets.textAtlas, "move_green", 50, 500);
+        Image image = imageResource.createImage();
+        image.addAction(Actions.moveTo(530, 360, 2.5f));
+        Assets.welcomeStage.addActor(image);
+    }
+
+    private void showFourScene() {
+        Music angle06 = Gdx.audio.newMusic(Gdx.files.internal("res/angle08.mp3"));
+        angle06.play();
+        Pixmap pixmap = new Pixmap(1280, 800, Pixmap.Format.RGBA8888);
+        pixmap.setColor(0xffccccff);
+        pixmap.fillRectangle(0, 0, 1280, 800);
+        starBackground = new Texture(1280, 800, Pixmap.Format.RGBA8888);
+        starBackground.draw(pixmap, 0, 0);
+        Image starBackgroundImage = new Image(starBackground);
+        Assets.welcomeStage.addActor(starBackgroundImage);
+        TextureRegion textureRegion = Assets.textAtlas.findRegion("star");
+
+        Random random = new Random();
+        int num;
+        images = new Image[88];
+        for (int j = 0; j < 8; j++) {
+            for (int i = 0; i < 11; i++) {
+                num = random.nextInt(5) + 1;
+                Image image = new Image(textureRegion);
+                image.setBounds(120 * i, 50 * (2 * j + 1), num * 16, num * 16);
+                image.setOrigin(image.getWidth() / 2, image.getHeight() / 2);
+                //  image.addAction(Actions.forever(Actions.rotateTo(-time%360*50)));
+                Assets.welcomeStage.addActor(image);
+            }
+        }
+        Assets.welcomeStage.addActor(Assets.closeButton);
+        Assets.welcomeStage.addActor(Assets.animatedFlipImage);
+
+        angle06.setOnCompletionListener(new Music.OnCompletionListener() {
+            @Override
+            public void onCompletion(Music music) {
+                blackImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music answer_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/answer_right4.mp3"));
+                        answer_right1.play();
+                        answer_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFinalScene();
+                            }
+                        });
+                        moveColor4();
+                    }
+                });
+                purpleImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music not_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/not_right4.mp3"));
+                        not_right1.play();
+                        moveColor4();
+                        not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFinalScene();
+
+                            }
+                        });
+
+                    }
+                });
+                greenImage.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        super.clicked(event, x, y);
+                        Music not_right1 = Gdx.audio.newMusic(Gdx.files.internal("res/not_right4.mp3"));
+                        not_right1.play();
+                        moveColor4();
+                        not_right1.setOnCompletionListener(new Music.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(Music music) {
+                                showFinalScene();
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        AnimationResource blueBoyResource = new AnimationResource("res/blue_boy.atlas", 14, 0.15f, true);
+
+        final AnimatedImage blueBoyAnimatedImage = blueBoyResource.createAnimatedImage();
+
+        blueBoyAnimatedImage.setPosition(700, 400);
+        blueBoyAnimatedImage.addAction(Actions.moveTo(520, 320, 4f));
+        Assets.welcomeStage.addActor(blueBoyAnimatedImage);
+        AnimationResource redBoyResource = new AnimationResource("res/red_boy.atlas", 14, 0.15f, true);
+        final AnimatedImage redBoyAnimatedImage = redBoyResource.createFilpAnimatedImage();
+        redBoyAnimatedImage.setPosition(50, 250);
+        redBoyAnimatedImage.addAction(Actions.moveTo(450, 250, 4f));
+        Assets.welcomeStage.addActor(redBoyAnimatedImage);
+        AnimationResource yellowBoyResource = new AnimationResource("res/yellow_boy.atlas", 14, 0.15f, true);
+
+        final AnimatedImage yellowBoyAnimatedImage = yellowBoyResource.createAnimatedImage();
+
+        yellowBoyAnimatedImage.setPosition(1200, 250);
+        yellowBoyAnimatedImage.addAction(Actions.moveTo(550, 250, 4f));
+        Assets.welcomeStage.addActor(yellowBoyAnimatedImage);
+
+
+        Timer timer = new Timer();
+        timer.scheduleTask(new Timer.Task() {
+            @Override
+            public void run() {
+                yellowBoyAnimatedImage.setStop(true);
+                blueBoyAnimatedImage.setStop(true);
+                redBoyAnimatedImage.setStop(true);
+
+                AnimationResource animationResource = new AnimationResource("res/circle3.atlas", 2,
+                        0.5f, true);
+                circle3 = animationResource.createAnimatedImage();
+                circle3.setPosition(530, 360);
+                Assets.welcomeStage.addActor(circle3);
+                Timer timer1 = new Timer();
+                timer1.scheduleTask(new Timer.Task() {
+                    @Override
+                    public void run() {
+                        circle3.setStop(true);
+
+                    }
+                }, 5f);
+                ImageResource blackCircle = new ImageResource(Assets.textAtlas, "blackCircle", 50, 500);
+                blackImage = blackCircle.createImage();
+                ImageResource purpleCircle = new ImageResource(Assets.textAtlas, "purpleCircle", 50, 300);
+                purpleImage = purpleCircle.createImage();
+                ImageResource greenCircle = new ImageResource(Assets.textAtlas, "greenCircle", 50, 100);
+                greenImage = greenCircle.createImage();
+                Assets.welcomeStage.addActor(blackImage);
+                Assets.welcomeStage.addActor(purpleImage);
+                Assets.welcomeStage.addActor(greenImage);
+
+            }
+        }, 2f);
+    }
+
+    private void moveColor4() {
+        blackImage.remove();
+        purpleImage.remove();
+        greenImage.remove();
+        ImageResource imageResource = new ImageResource(Assets.textAtlas, "move_black", 50, 500);
+        moveBlackImage = imageResource.createImage();
+        moveBlackImage.addAction(Actions.moveTo(530, 360, 2.5f));
+        Assets.welcomeStage.addActor(moveBlackImage);
+    }
+
+    private void showFinalScene() {
+        float firstDelay = 15f;
+        float spaceTime = 5f;
+        moveBlackImage.remove();
+        circle3.remove();
+        Music angle06 = Gdx.audio.newMusic(Gdx.files.internal("res/angle09.mp3"));
+        angle06.play();
+        AnimationResource animationResource1 = new AnimationResource("res/intersect1.atlas", 2,
+                0.5f, true);
+        final AnimatedImage animatedImage1 = animationResource1.createAnimatedImage();
+        animatedImage1.addAction(Actions.sequence(Actions.fadeOut(0f), Actions.delay(firstDelay),
+                Actions.fadeIn(0f), Actions.delay(firstDelay + spaceTime), Actions.fadeOut(0f)));
+        animatedImage1.setPosition(530, 360);
+        Assets.welcomeStage.addActor(animatedImage1);
+        AnimationResource animationResource2 = new AnimationResource("res/intersect2.atlas", 2,
+                0.5f, true);
+        final AnimatedImage animatedImage2 = animationResource2.createAnimatedImage();
+        animatedImage2.addAction(Actions.sequence(Actions.fadeOut(0f), Actions.delay(firstDelay + spaceTime), Actions.fadeIn(0f)
+                , Actions.delay(firstDelay + 2 * spaceTime), Actions.fadeOut(0f)));
+        animatedImage2.setPosition(530, 360);
+        Assets.welcomeStage.addActor(animatedImage2);
+        AnimationResource animationResource3 = new AnimationResource("res/intersect3.atlas", 2,
+                0.5f, true);
+        final AnimatedImage animatedImage3 = animationResource3.createAnimatedImage();
+        animatedImage3.addAction(Actions.sequence(Actions.fadeOut(0f), Actions.delay(firstDelay + 2 * spaceTime), Actions.fadeIn(0f)
+                , Actions.delay(firstDelay + 3 * spaceTime), Actions.fadeOut(0f)));
+        animatedImage3.setPosition(530, 360);
+        Assets.welcomeStage.addActor(animatedImage3);
+        AnimationResource animationResource4 = new AnimationResource("res/intersect4.atlas", 2,
+                0.5f, true);
+        final AnimatedImage animatedImage4 = animationResource4.createAnimatedImage();
+        animatedImage4.addAction(Actions.sequence(Actions.fadeOut(0f), Actions.delay(firstDelay + 3 * spaceTime), Actions.fadeIn(0f)
+                , Actions.delay(firstDelay + 4 * spaceTime), Actions.fadeOut(0f)));
+        animatedImage4.setPosition(540, 360);
+        Assets.welcomeStage.addActor(animatedImage4);
     }
 }
